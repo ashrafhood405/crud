@@ -6,15 +6,15 @@ function Submit(){
   var dataEntered = retrieveData();
   var readData = readingDataFromLocalStorage(dataEntered);
   if (dataEntered == false){
-    msg.innerHTML =`<h3 style = "color: red"> Please Enter Data!!<?h3>`;
+    msg.innerHTML =`<h3 style = "color: blue"> Please Enter Data!!<?h3>`;
     
   }else{
     if (row === null) {
       insert(readData);
-      msg.innerHTML = `<h3 style = "color: green">Data inserted<?h3>`;
+      msg.innerHTML = `<h3 style = "color: orange">Data inserted<?h3>`;
     }else{
       update();
-      msg.innerHTML = `<h3 style = "color: green">Data Updated<?h3>`;
+      msg.innerHTML = `<h3 style = "color: orange">Data Updated<?h3>`;
     }
   }
   document.getElementById("form").reset();    
